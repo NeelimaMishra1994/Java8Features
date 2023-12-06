@@ -12,4 +12,11 @@ public interface InterF {
 	default void m4() {
 		System.out.println("default method of m4");
 	}
+//	default int hashCode() {//default method can not override the object class method.
+							//because it is already availlable to all the implementation class
+//		return 0;
+//	}
+	public static void m5() {
+		System.out.println("Hello i am static method");
+	}
 }
