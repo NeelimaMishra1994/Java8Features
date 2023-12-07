@@ -1,9 +1,25 @@
 Predicate,Function and Consumer
 Take some input and perform some conditional check  and returns boolean value - Predicate
+interface<T t>{
+public boolean Test();
+}
 Take some input and perform some operation and return the result which is need not to be boolean type-Function
+interface Function<T R>{
+	public t apply();
+}
 Accept some input and perform required operation and not required to return anything -Consumer
+Interface Consumer<T>{
+		public void accept(T t);
+}
+	
 just supply my required objects and it won't take any input -Supplier
 interface Supplier<R>
 {
  public R get();
 }
+
+-------------------
+Predicate---->test()-return type boolean
+function - apply()-return type could be anything
+consumer-accept()-return type void
+supplier-get()-return type 

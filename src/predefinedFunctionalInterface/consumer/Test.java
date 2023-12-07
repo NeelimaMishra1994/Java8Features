@@ -1,10 +1,6 @@
 package predefinedFunctionalInterface.consumer;
 
 import java.util.function.Consumer;
-import java.util.function.Function;
-
-import predefinedFunctionalInterface.function.Student;
-
 public class Test {
 	//take the input ,perform the operation and don't return anything
 	//protype-
