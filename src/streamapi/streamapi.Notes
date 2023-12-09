@@ -1,0 +1,60 @@
+if we want to process objects from collection then we should use stream concept
+to use stream you should call it on collection
+
+Stream c=c.stream();//if we apply stream on collection object it will return stream object
+java.util.stream.pkg
+
+filter()-method is used to filter the elements based on some condition.
+filter(Predicate)
+input -->10 elements
+output->0 to 10 or <10 element
+--------------------------------------------------------------------------------------------------------------------------------------------
+Map()- for every object you want to perform some operation and want to return some result then should go for map. 
+Map(Function)
+input -->10 elements
+output-10 elements
+----------------------------------------------------------------------------------------------------------------
+Count()-how many elements are there in your stream if you want to count  ,for that we use count
+--------------------------------------------------------------------------------------------------------------------------------------------
+Sorted()-- used to sort the stream.it will return DNSO.//ascending order
+sorted(Comparator)==customized sorting order
+
+comparator -->compare(Obj1 obj2)//this is for ascending
+           return -ve if obj1 has to come before obj2
+           return +ve if obj1 has to come after obj2
+           return 0 if obj1 ==obj2
+ for descending order-
+ 		   return +ve if obj1 has to come before obj2
+           return -ve if obj1 has to come after obj2
+           return 0 if obj1 ==obj2
+           
+           (i1,i2)->(i1<i2)?+1:(i1>i2)?-1:0;
+           
+ Comparable interface is meant for DNSO while comparator is meant for customized sorting order
+ Comparable has CompareTo method which does DNSO
+ 
+ (I1,I2)->I1.comapreTo(I2) ===> DNSO
+ (I1,I2)->I2.comapreTo(I1) ===> reverse of DNSO
+ (I1,I2)->-I1.comapreTo(I2) ===> reverse of DNSO
+  --------------------------------------------------------------------------------------------------------------------------------------
+  
+  min(comparator) and max(comparator)-
+  in stream , if you using min and max function, in sorting,t does not depends on the value in list min and max value or array, the first value will be min and
+  last value of list will be max,when we are talking about min and max element, compulsory we have to talk about sorting, there is no min and max
+  without sorting
+  ex;[3,4,5,10,15]-ascending order
+  min=3  max=15
+  [15,10,5,4,3]-descending order
+  min=15
+  max=3
+  
+  while using min and max function compulsory you have to pass comparator, if you are not passing it won't work.
+  it won't consider DNSO also.
+  ----------------------------------------------------------------------------------------------------------------------------------------------
+  forEach() - forEach is a method here in java 1.8.
+  it is used to iterate through every element in stream
+  al.stream().forEach(function)-so in this stream, for every element this operation will be performed.
+  
+  
+  
+  
